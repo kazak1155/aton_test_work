@@ -44,6 +44,6 @@ class RegisteredUserController extends Controller
 
         Auth::login($user);
 
-        return redirect()->route('main');
+        return redirect()->route('showClients');
     }
 }

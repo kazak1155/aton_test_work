@@ -43,4 +43,18 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    /**
+     * link to a table in a database
+     *
+     */
+    protected $table = 'users';
+
+    /**
+     * link to a table in a database
+     *
+     */
+    public function clients() {
+        return $this->hasMany(Clients::class, 'user_id', 'id');
+    }
 }
